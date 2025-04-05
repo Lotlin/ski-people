@@ -1,0 +1,71 @@
+@use "variables" as *;
+
+.footer {
+  padding: 40px 0;
+  background-color: $text-dark;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    color: $text-beige;
+  }
+  
+  &__logo-link {
+    width: 164px;
+  }
+
+  &__contacts-phone {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+    color: $background-white;
+  }
+  
+  &__contacts-social-list {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+
+  &__developers-item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $bp-md) {
+    &__container {
+      padding: 0 63px;
+      display: grid;
+      grid-template-columns: minmax(137px, auto) minmax(102, auto) 1fr;
+      gap: 24px 120px;
+      grid-template-areas: 
+        "logo logo logo"
+        "developers contacts copiryght";
+    }
+
+    &__logo-link {
+      grid-area: logo;
+      width: 275px;
+      justify-self: center;
+    }
+
+    &__contacts-wrapper {
+      grid-area: contacts;
+    }
+
+    &__contacts-social-list {
+      justify-content: space-between;
+    }
+
+    &__developers-list {
+      grid-area: developers;
+      align-self: flex-end;
+    }
+
+    &__copyright {
+      grid-area: copiryght;
+      align-self: flex-end;
+    }
+  }
+}
