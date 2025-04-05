@@ -1,0 +1,143 @@
+@use "variables" as *;
+
+.header {
+  padding: 18px 0;
+
+  &__container {
+    position: relative;
+    display: grid;
+    gap: 17px;
+    grid-template-columns: 1fr minmax(66px, auto);
+    grid-template-areas: 
+    "logo links"
+    "search search";
+    align-items: center;
+    padding-bottom: 16px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(100% - (2 * $padding-sm));
+      height: 1px;
+      left: $padding-sm;
+      bottom: 0;
+      background-color: $background-light-blue;
+    }
+  }
+  
+  &__logo-link {
+    grid-area: logo;
+    width: 106px;
+  }
+
+  &__search {
+    position: relative;
+    grid-area: search;
+    min-width: 288px;
+  }
+  
+  &__search-input {
+    padding: 12px 45px 12px 24px;
+    border-radius: 32px;
+    width: 100%;
+    height: 38px;
+    background-color: $background-light-blue;
+    border: none;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    color: $text-light;
+  }
+  
+  &__search-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 24px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  &__links-wrapper {
+    grid-area: links;
+    justify-self: end;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  &__link-text {
+    display: none;
+  }
+  
+  &__link-count {
+    order: 1;
+  }
+
+  @media (min-width: $bp-md) {
+    padding: 16px 0;
+
+    &__container {
+      &::after {
+        width: calc(100% - (2 * $padding-md));
+        left: $padding-md;
+      }
+    }
+
+    &__logo-link {
+      width: 130px;
+    }
+
+    &__link-text {
+      display: inline-block;
+      color: $text-dark;
+    }
+
+    &__link-count {
+      order: 0;
+    }
+  }
+
+  @media (min-width: $bp-lg) {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      gap: 82px;
+
+      &::after {
+        width: calc(100% - (2 * $padding-lg));
+        left: $padding-lg;
+      }
+    }
+
+    &__search {
+      width: 408px;
+    }
+
+    &__links-wrapper {
+      max-width: 198px;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $bp-xl) {
+    &__container {
+      &::after {
+        width: calc(100% - (2 * $padding-xl));
+        left: $padding-xl;
+      }
+    }
+    
+    &__search {
+      width: 514px;
+    }
+  }
+}
