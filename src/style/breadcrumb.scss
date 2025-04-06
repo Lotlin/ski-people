@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.breadcrumb {
+  padding-bottom: 24px;
+
+  &__list {
+    display: flex;
+    gap: 19px;
+    color: $text-light;
+  }
+  
+  &__item {
+    position: relative;
+    &:not(:last-child)::after {
+      position: absolute;
+      content: ">";
+      width: 7px;
+      height: 14px;
+      top: 50%;
+      right: -13px;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media (min-width: $bp-md) {
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding-bottom: 40px;
+  }
+}
