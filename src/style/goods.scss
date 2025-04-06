@@ -1,0 +1,47 @@
+@use "variables" as *;
+
+.goods {
+  padding: 20px 0;
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: 900;
+  }
+  
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 32px 8px;
+  }
+
+  @media (min-width: $bp-md) {
+    padding: 32px 0;
+
+    &__title {
+      margin-bottom: 32px;
+      font-size: 32px;
+    }
+    
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 32px 10px;
+    }
+  }
+
+  @media (min-width: $bp-lg) {
+    padding: 40px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+    
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+      gap: 40px 16px;
+    }
+  }
+}

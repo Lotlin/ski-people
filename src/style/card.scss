@@ -1,0 +1,107 @@
+@use "variables" as *;
+
+.card {
+  position: relative;
+
+  &__link {
+    margin-bottom: 12px;
+    display: block;
+  }
+  
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  
+  &__like-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+  
+  &__title {
+    margin-bottom: 18px;
+    color: $text-dark;
+    font-weight: 400;
+  }
+  
+  &__price {
+    margin-bottom: 12px;
+    color: $text-dark;
+  }
+  
+  &__cart-btn {
+    width: 100%;
+    padding: 12px 24px;
+    border: 1px solid $blue;
+    border-radius: 32px;
+    color: $blue;
+
+    &:hover {
+      background-color: blue;
+      color: $background-white;
+    }
+
+    &:disabled {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: $background-white;
+      border: 1px solid $dark-blue;
+      color: blue;
+    }
+  }
+
+  @media (min-width: $bp-md) {
+    display: grid;
+    grid-template-columns: 1fr minmax(80px, auto);
+    gap: 19px 11px;
+    grid-template-areas: 
+    "link link"
+    "title price"
+    "btn btn";
+  
+    &__link {
+      grid-area: link;
+      margin-bottom: 0;
+    }
+
+    &__title {
+      grid-area: title;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+    
+    &__price {
+      grid-area: price;
+      justify-self: flex-end;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    
+    &__cart-btn {
+      grid-area: btn;
+      padding: 12px 24px;
+      border: 1px solid #0044f0;
+      border-radius: 32px;
+      color: $blue;
+    }
+  }
+
+  @media (min-width: $bp-lg) {
+    gap: 16px 4px;
+
+    &__title {
+      margin-bottom: 2px;
+    }
+    
+    &__price {
+      margin-bottom: 2px;
+    }
+  }
+}
