@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 .breadcrumb {
-  padding-bottom: 24px;
+  padding-bottom: 12px;
 
   &__list {
     display: flex;
@@ -23,10 +23,10 @@
   }
 
   @media (min-width: $bp-md) {
-    padding-bottom: 32px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: $bp-lg) {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
 }
