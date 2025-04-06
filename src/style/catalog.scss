@@ -2,17 +2,11 @@
 
 .catalog {
   overflow-x: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
 
-  &__container {
-  }
-  
   &__list {
     display: flex;
     gap: 4px;
-  }
-  
-  &__item {
   }
   
   &__link {
@@ -40,10 +34,10 @@
   }
 
   @media (min-width: $bp-md) {
-    padding-bottom: 32px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: $bp-lg) {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
 }
