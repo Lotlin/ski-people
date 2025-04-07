@@ -31,6 +31,15 @@
         background-color: $background-light-grey;;
       }
     }
+
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: $blue;
+      color: $background-white;
+      border: 1px solid transparent;
+    }
+
   }
 
   @media (min-width: $bp-md) {

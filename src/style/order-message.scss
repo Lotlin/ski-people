@@ -60,6 +60,17 @@
     background: $blue;
     color: #fff;
     text-align: center;
+
+    &:hover {
+      background-color: $deep-blue;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      border: 1px solid $dark-blue;
+      background-color: $blue;
+    }
   }
 
   @media (min-width: $bp-md) {

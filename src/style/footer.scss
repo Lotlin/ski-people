@@ -14,6 +14,18 @@
   
   &__logo-link {
     width: 164px;
+
+    transition: filter 0.3s ease;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      scale: 0.9;
+    }
   }
 
   &__contacts-phone {
@@ -21,6 +33,16 @@
     display: flex;
     gap: 8px;
     color: $background-white;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      border-bottom: 1px solid $blue;
+    }
   }
   
   &__contacts-social-list {
@@ -29,8 +51,34 @@
     gap: 13px;
   }
 
+  &__contacts-social-link {
+    color: $background-white;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      color: $dark-blue;
+    }
+  }
+
   &__developers-item:not(:last-child) {
     margin-bottom: 8px;
+  }
+  
+  &__developers-link {
+    &:hover {
+      color: $blue;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      color: $dark-blue;
+    }
   }
 
   @media (min-width: $bp-md) {

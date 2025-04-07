@@ -61,6 +61,17 @@
     border-radius: 32px;
     background-color: $blue;
     color: $background-white;
+
+    &:hover {
+      background-color: $deep-blue;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      border: 1px solid $dark-blue;
+      background-color: $blue;
+    }
   }
 
   @media (min-width: $bp-md) {

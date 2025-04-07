@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.like-btn svg path {
+  fill: $background-white;
+  stroke: $text-dark;
+}
+
+.like-btn:hover svg path {
+  fill: $blue;
+  stroke: $blue;
+}
+
+.like-btn:focus {
+  outline: none;
+}
+
+.like-btn:focus-visible svg path {
+  outline: none;
+  stroke: $blue;
+  filter: drop-shadow(0 0 4px $blue);
+}
+
+.like-btn:active svg path,
+.like-btn--active svg path {
+  fill: $blue;
+  stroke: $blue;
+  filter: none;
+}
+
+.like-btn:active {
+  filter: none;
+}
