@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+.slider-thumbnails {
+  display: none;
+
+  @media (min-width: $bp-md) {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+
+    &__item {
+      flex: 1;
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  }
+
+  @media (min-width: $bp-lg) {
+    gap: 12px;
+  }
+
+  @media (min-width: $bp-xl) {  
+    gap: 16px;
+  }
+}
