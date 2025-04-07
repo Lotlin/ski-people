@@ -1,12 +1,14 @@
 @use "variables" as *;
 
 .slider-thumbnails {
-  display: none;
-
   @media (min-width: $bp-md) {
-    display: flex;
-    justify-content: space-between;
-    gap: 14px;
+    display: block;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+    }
 
     &__item {
       flex: 1;
@@ -21,10 +23,14 @@
   }
 
   @media (min-width: $bp-lg) {
-    gap: 12px;
+    &__wrapper {
+      gap: 12px;
+    }
   }
 
-  @media (min-width: $bp-xl) {  
-    gap: 16px;
+  @media (min-width: $bp-xl) { 
+    &__wrapper {
+      gap: 16px;
+    } 
   }
 }
