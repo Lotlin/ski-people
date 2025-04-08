@@ -1,23 +1,16 @@
 import 'normalize.css';
 import './style.scss';
+import './js/slider.js';
+import {initRouter} from './js/router.js';
 
-import {Navigation, Thumbs} from 'swiper/modules';
-import Swiper from 'swiper';
+// toDO настроить все padding
+// todo пагинация
+// toDO 404
+// toDO cart
 
-const thumbnailsSlider = new Swiper('.product__slider-thumbnails', {
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
+const init = () => {
+  initRouter();
+};
 
-const productSlider = new Swiper('.product__slider', {
-  spaceBetween: 10,
-  navigation: {
-    nextEl: '.product__slider-arrow--next',
-    prevEl: '.product__slider-arrow--prev',
-  },
-  modules: [Navigation, Thumbs],
-  thumbs: {
-    swiper: thumbnailsSlider,
-  },
-});
+init();
+
