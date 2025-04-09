@@ -1,10 +1,19 @@
 import {layout} from './layout.js';
 
-const breadcrumbTitles = { // toDO
+const breadcrumbTitles = {
   main: 'Главная',
   favorite: 'Избранное',
-  ski: 'Лыжи',
-  mountain: 'Горные лыжи',
+  snaryazhenie: 'Снаряжение',
+  odezhda: 'Одежда',
+  zashita: 'Защита',
+  snoubord: 'Сноуборд',
+  snoubordy: 'Сноуборды',
+  termobelyyo: 'Термобельё',
+  lyzhi: 'Лыжи',
+  kurtka: 'Куртка',
+  shtany: 'Штаны',
+  shlem: 'Шлем',
+  botinki: 'Ботинки',
 };
 
 export const breadcrumb = () => {
@@ -41,6 +50,8 @@ export const breadcrumb = () => {
     li.className = 'breadcrumb__item';
 
     if (isLast) {
+      if (!isNaN(part)) return; // чтобы не отображать id товара
+
       const span = document.createElement('span');
       span.className = 'breadcrumb__link';
       span.textContent = breadcrumbTitles[part] || part;

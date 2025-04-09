@@ -9,7 +9,7 @@ export const catalog = () => {
   
   `;
 
-  el.append(layout(child, 'catalog__container'));
+  el.append(layout('catalog__container', child));
 
   return el;
 };

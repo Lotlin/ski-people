@@ -6,6 +6,8 @@ import {catalog} from './components/catalog.js';
 import {goods} from './components/goods.js';
 import {title} from './components/title.js';
 import {breadcrumb} from './components/breadcrumb.js';
+import {product} from './components/product.js';
+import {orderMessage} from './components/orderMessage.js';
 
 const router = new Navigo('/', {linksSelector: 'a[href^="/"]'});
 
@@ -33,6 +35,14 @@ export const initRouter = () => {
         main.append(title(), breadcrumb(), goodsElem);
 
         console.log('favorite');
+      })
+      .on('/:type/:name/:id', (params) => {
+        main.innerHTML = '';
+        main.append(title(), breadcrumb(), product(params.data.id));
+      })
+      .on('/order', () => { // toDO поменять
+        main.innerHTML = '';
+        main.append(orderMessage());
       })
       .notFound(() => {
         console.log('ERROR 404');

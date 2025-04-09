@@ -1,3 +1,5 @@
+import {getUrl} from '../util.js';
+
 /* eslint-disable max-len */
 export const goodItem = (goodData) => {
   const el = document.createElement('article');
@@ -5,7 +7,7 @@ export const goodItem = (goodData) => {
 
   const link = document.createElement('a');
   link.className = 'card__link';
-  link.href = '#'; // toDO
+  link.href = getUrl(goodData);
 
   const img = new Image();
   img.className = 'card__img';
