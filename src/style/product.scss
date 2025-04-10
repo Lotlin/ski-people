@@ -55,6 +55,34 @@
     }
   }
 
+  &__slider-arrow-svg {
+    color: rgba(255, 255, 255, 0.4);
+
+    :hover {
+      color: white;
+    }
+
+    :active {
+      color: $blue;
+    }
+  }
+
+  &__slider-arrow-svg path {
+    fill: $text-dark;
+  }
+
+  &__slider-arrow-svg:hover path {
+    fill: $blue;
+  }
+
+  &__slider-arrow-svg:focus path {
+    fill: $background-white;
+  }
+
+  &__slider-arrow-svg:active path {
+    fill: $background-white;
+  }
+
   &__slider-thumbnails {
     display: none;
   }
