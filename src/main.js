@@ -12,5 +12,5 @@ const init = () => {
   initRouter();
 };
 
-init();
+// init();
 

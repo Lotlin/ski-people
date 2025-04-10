@@ -1,0 +1,222 @@
+@use "variables" as *;
+
+.cart-form {
+  &__title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  &__inputs {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 10px;
+    border: 0;
+  }
+  
+  &__input {
+    min-width: 288px;
+    max-width: 350px;
+    flex: 0 0 48%; 
+    background: $background-light-grey;
+    border-radius: 4px;
+    padding: 12px 14px;
+    color: $text-dark;
+    min-height: 38px;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &::placeholder {
+      color: $text-light;
+    };
+
+    &--textarea {
+      min-height: 120px;
+      resize: none;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border: 1px solid $background-grey;
+    }
+  }
+  
+  &__radios {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: none;
+    border-bottom: 1px solid $background-light-grey;
+    color: $text-charcoal;
+  }
+  
+  &__delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+  }
+  
+  &__legend {
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    &__label {
+      padding-left: 8px; /* для Safari */
+    }
+  }
+  
+  &__radio {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    padding: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $text-charcoal;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &:hover::before {
+      border-color: $blue;
+      box-shadow: 0 0 0 3px rgba($blue, 0.2);
+    }
+
+    &:focus-visible::before {
+      box-shadow: 0 0 0 3px rgba($blue, 0.5);
+    }
+
+    &:active::before {
+      transform: scale(0.95);
+      background-color: lighten($dark-blue, 40%);
+    }
+
+    &::after {
+      opacity: 0;
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 5px;
+      width: 6px;
+      height: 6px;
+      background-color: $text-charcoal;
+      border-radius: 50%;
+    }
+
+    &:active::after,
+    &:checked::after {
+      opacity: 1;
+    }
+  }
+  
+  &__payment {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+  }
+
+  @media (min-width: $bp-md) {
+    &__title {
+      margin-bottom: 16px;
+    }
+    
+    &__inputs {
+      margin-bottom: 16px;
+      max-width: 832px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 10px;
+    }
+    
+    &__input {
+      min-width: 350px;
+      max-width: 480px;
+
+      &--textarea {
+        grid-column: span 2; 
+        min-width: 100%;
+      }
+    }
+    
+    &__radios {
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      width: 470px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    
+    &__delivery {
+      font-size: 16px;
+    }
+    
+    &__legend {
+      margin-bottom: 12px;
+    }
+    
+    &__payment {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: $bp-lg) {
+    &__title {
+      font-size: 20px;
+    }
+    
+    &__inputs {
+      margin-bottom: 24px;
+      max-width: 832px;
+      gap: 16px 16px;
+    }
+    
+    &__input {
+      min-width: 408px;
+
+      &--textarea {
+        min-width: 100%;
+      }
+    }
+    
+    &__radios {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      width: 408px;
+      gap: 16px;
+    }
+
+    &__legend {
+      margin-bottom: 16px;
+    }
+  }
+}

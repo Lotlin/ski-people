@@ -12,47 +12,93 @@
     <title>SKI People</title>
   </head>
   <body>
-      <!--<section class="cart">
+      <section class="cart">
         <div class="container cart__container">
           <h2 class="cart__title">Корзина</h2>
 
           <ul class="cart__list">
             <li class="cart__item">
-              <img class="cart__item-img" src="/img/ski-mini" alt="Лыжи">
-              <h3 class="cart__item-title">Горные лыжи</h3>
-              <p class="cart__item-price">5&nbsp;000&nbsp;₽</p>
-              <p class="cart__item-id">арт.&nbsp;84348945757</p>
-              <div class="cart__item-counter item-counter">
-                <button class="item-counter__btn item-counter__btn--minus">-</button>
-                <p class="item-counter__count">1</p>
-                <button class="item-counter__btn item-counter__btn--plus">-</button>
-              </div>
+              <article class="cart__good good-cart">
+                <img class="good-cart__img" src="/img/ski-mini.jpg" alt="Лыжи">
+                <h3 class="good-cart__title">Горные лыжи</h3>
+                <p class="good-cart__price">5&nbsp;000&nbsp;₽</p>
+                <p class="good-cart__id">арт.&nbsp;84348945757</p>
+                <div class="cart__item-counter good-cart__counter item-counter">
+                  <button class="item-counter__btn item-counter__btn--minus">-</button>
+                  <p class="item-counter__count">1</p>
+                  <button class="item-counter__btn item-counter__btn--plus">+</button>
+                </div>
+              </article>
             </li>
 
             <li class="cart__item">
-              <img class="cart__item-img" src="/img/ski-mini" alt="Лыжи">
-              <h3 class="cart__item-title">Горные лыжи</h3>
-              <p class="cart__item-price">5&nbsp;000&nbsp;₽</p>
-              <p class="cart__item-id">арт.&nbsp;84348945757</p>
-              <div class="cart__item-counter item-counter">
-                <button class="item-counter__btn item-counter__btn--minus">-</button>
-                <p class="item-counter__count">1</p>
-                <button class="item-counter__btn item-counter__btn--plus">-</button>
-              </div>
+              <article class="cart__good good-cart">
+                <img class="good-cart__img" src="/img/ski-mini.jpg" alt="Лыжи">
+                <h3 class="good-cart__title">Горные лыжи</h3>
+                <p class="good-cart__price">5&nbsp;000&nbsp;₽</p>
+                <p class="good-cart__id">арт.&nbsp;84348945757</p>
+                <div class="cart__item-counter item-counter">
+                  <button class="item-counter__btn item-counter__btn--minus">-</button>
+                  <p class="item-counter__count">1</p>
+                  <button class="item-counter__btn item-counter__btn--plus">+</button>
+                </div>
+              </article>
             </li>
 
             <li class="cart__item">
-              <img class="cart__item-img" src="/img/ski-mini" alt="Лыжи">
-              <h3 class="cart__item-title">Горные лыжи</h3>
-              <p class="cart__item-price">5&nbsp;000&nbsp;₽</p>
-              <p class="cart__item-id">арт.&nbsp;84348945757</p>
-              <div class="cart__item-counter item-counter">
-                <button class="item-counter__btn item-counter__btn--minus">-</button>
-                <p class="item-counter__count">1</p>
-                <button class="item-counter__btn item-counter__btn--plus">-</button>
-              </div>
+              <article class="cart__good good-cart">
+                <img class="good-cart__img" src="/img/ski-mini.jpg" alt="Лыжи">
+                <h3 class="good-cart__title">Горные лыжи</h3>
+                <p class="good-cart__price">5&nbsp;000&nbsp;₽</p>
+                <p class="good-cart__id">арт.&nbsp;84348945757</p>
+                <div class="cart__item-counter item-counter">
+                  <button class="item-counter__btn item-counter__btn--minus">-</button>
+                  <p class="item-counter__count">1</p>
+                  <button class="item-counter__btn item-counter__btn--plus">+</button>
+                </div>
+              </article>
             </li>
           </ul>
+
+          <form class="cart__form cart-form" action="#" id="cartForm">
+            <h3 class="cart-form__title">Данные для доставки</h3>
+  
+            <fieldset class="cart-form__inputs">
+              <input class="cart-form__input" type="text" placeholder="Фамилия Имя Отчество" name="name">
+              <input class="cart-form__input" type="tel" placeholder="Телефон" name="phone">
+              <input class="cart-form__input" type="email" placeholder="E-mail" name="email">
+              <input class="cart-form__input" type="text" placeholder="Адрес доставки" name="address">
+              <textarea class="cart-form__input cart-form__input--textarea" placeholder="Комментарий к заказу" name="comment"></textarea>
+            </fieldset>
+  
+            <fieldset class="cart-form__radios">
+              <fieldset class="cart-form__delivery">
+                <legend class="cart-form__legend">Доставка</legend>
+                <label class="cart-form__label">
+                  <input class="cart-form__radio"  type="radio" name="delivery" value="delivery">
+                  Доставка
+                </label>
+                
+                <label class="cart-form__label">
+                  <input class="cart-form__radio" type="radio" name="delivery" value="pickup">
+                  Самовывоз
+                </label>
+              </fieldset>
+  
+              <fieldset class="cart-form__payment">
+                <legend class="cart-form__legend">Оплата</legend>
+                <label class="cart-form__label">
+                  <input class="cart-form__radio" type="radio" name="payment" value="card">
+                  Картой при получении
+                </label>
+                
+                <label class="cart-form__label">
+                  <input class="cart-form__radio" type="radio" name="payment" value="cash">
+                  Наличными при получении
+                </label>
+              </fieldset>
+            </fieldset>
+          </form>
 
           <div class="cart__placing">
             <h3 class="cart__placing-title">Оформление</h3>
@@ -62,49 +108,13 @@
               <p class="cart__placing-cost">20&nbsp;000&nbsp;₽</p>
             </div>
 
-            <p class="cart__order-delivery-price">Доставка 0&nbsp;₽</p>
+            <p class="cart__placing-delivery-price">Доставка 0&nbsp;₽</p>
 
-            <button class="cart-placing-btn" type="submit" form="cartForm">Оформить заказ</button>
+            <button class="cart__placing-btn" type="submit" form="cartForm">Оформить заказ</button>
           </div>
         </div>
 
-        <form class="cart__form cart-form" action="#" id="cartForm">
-          <h3 class="cart-form__title">Данные для доставки</h3>
-
-          <fieldset class="cart-form__inputs">
-            <input class="cart-form__input" type="text" placeholder="Фамилия Имя Отчество" name="name">
-            <input class="cart-form__input" type="tel" placeholder="Телефон" name="phone">
-            <input class="cart-form__input" type="email" placeholder="E-mail" name="email">
-            <input class="cart-form__input" type="text" placeholder="Адрес доставки" name="address">
-            <textarea class="cart-form__input" placeholder="Комментарий к заказу" name="comment"></textarea>
-          </fieldset>
-
-          <fieldset class="cart-form__radios">
-            <fieldset class="cart-form__delivery">
-              <legend class="cart-form__legend">Доставка</legend>
-              <label>
-                <input class="cart-form__radio"  type="radio" name="delivery">
-                Доставка
-              </label>
-              
-              <label>
-                <input class="cart-form__radio" type="radio" name="delivery">
-                Самовывоз
-              </label>
-            </fieldset>
-
-            <fieldset class="cart-form__payment">
-              <legend class="cart-form__legend">Оплата</legend>
-              <label>
-                <input class="cart-form__radio" type="radio" name="payment">Картой при получении
-              </label>
-              
-              <label>
-                <input class="cart-form__radio" type="radio" name="payment">Наличными при получении
-              </label>
-            </fieldset>
-          </fieldset>
-        </form>
-      </section>-->
+        
+      </section>
   </body>
 </html>

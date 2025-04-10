@@ -1,0 +1,143 @@
+@use "variables" as *;
+.cart {
+  padding: 12px 0 60px;
+  
+  &__title {
+    margin-bottom: 24px;
+    font-family: $font-secondary;
+    font-weight: 900;
+    font-size: 24px;
+  }
+  
+  &__list {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-bottom: 1px solid $background-light-grey;
+  }
+
+  &__placing-title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  &__placing-info {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__placing-delivery-price {
+    margin-bottom: 8px;
+    font-size: 9px;
+    color: $text-light;
+  }
+  
+  &__placing-btn {
+    width: 100%;
+    padding: 12px 24px;
+    border: 1px solid $blue;
+    border-radius: 32px;
+    background-color: $blue;
+    color: $background-white;
+
+    &:hover {
+      background-color: blue;
+      color: $background-white;
+    }
+
+    &:disabled {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: $background-white;
+      border: 1px solid $dark-blue;
+      color: blue;
+    }
+  }
+
+  @media (min-width: $bp-md) {
+    padding: 16px 0 80px;
+  
+    &__title {
+      font-size: 32px;
+    }
+    
+    &__list {
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+    }
+    
+    &__placing-title {
+      font-size: 20px;
+    }
+  
+    &__placing-info {
+      margin-bottom: 40px;
+    }
+
+    &__placing-delivery-price {
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+  }
+
+  @media (min-width: $bp-lg) {
+    padding: 20px 0 100px;
+
+    &__container {
+      display: grid;
+      gap: 40px 122px;
+      grid-template-columns: 514px minmax(302px, 1fr);
+      grid-template-areas: 
+      "title title"
+      "list placing"
+      "form form";
+    }
+
+    &__title {
+      grid-area: title;
+    }
+
+    &__list {
+      position: relative;
+      grid-area: list;
+      margin-bottom: 0;
+      padding-bottom: 40px;
+      border-bottom: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 1px;
+        bottom: 0;
+        background-color: $background-light-grey;;
+      }
+    }
+
+    &__form {
+      grid-area: form;
+    }
+  
+    &__placing {
+      grid-area: placing;
+      justify-self: end;
+      width: 302px;
+    }
+  }
+
+  @media (min-width: $bp-xl) {
+    &__placing {
+      width: 408px;
+    }
+  }
+}
