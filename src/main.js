@@ -7,10 +7,11 @@ import {initRouter} from './js/router.js';
 // todo пагинация
 // toDO 404
 // toDO cart
+// toDO прижать футер
 
 const init = () => {
   initRouter();
 };
 
-// init();
+init();
 

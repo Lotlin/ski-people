@@ -17,16 +17,15 @@
   &__btn {
     &:hover {
       color: $blue;
-      transform: scale(2);
     }
   
     &:active {
       transform: scale(0.9);
+      transform-origin: center;
     }
 
     &:focus {
       outline: none;
-      transform: scale(2);
     }
   }
 }

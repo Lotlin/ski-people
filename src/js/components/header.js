@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import {layout} from './layout.js';
+// toDO колиячество товаров в корзине
 
 export const header = () => {
   const el = document.createElement('header');
