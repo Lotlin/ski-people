@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import {layout} from './layout.js';
+import { layout } from './layout.js';
 
 export const product = (id) => {
   const productData = { // toDO получение данных по id + данные для слайдера

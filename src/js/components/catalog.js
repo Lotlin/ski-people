@@ -1,5 +1,6 @@
-/* eslint-disable max-len */
-import {layout} from './layout.js';
+
+import { layout } from './layout.js';
+// toDO разделы каталога динамические
 
 export const catalog = () => {
   const el = document.createElement('div');

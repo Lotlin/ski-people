@@ -1,4 +1,4 @@
-import {getUrl} from '../util.js';
+import { getUrl } from '../util.js';
 
 /* eslint-disable max-len */
 export const goodItem = (goodData) => {

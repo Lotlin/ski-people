@@ -1,7 +1,7 @@
 import 'normalize.css';
 import './style.scss';
 import './js/slider.js';
-import {initRouter} from './js/router.js';
+import { initRouter } from './js/router.js';
 
 // toDO настроить все padding
 // todo пагинация

@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import {layout} from './layout.js';
+import { layout } from './layout.js';
 // toDO колиячество товаров в корзине
 
 export const header = () => {

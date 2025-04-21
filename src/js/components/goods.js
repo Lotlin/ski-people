@@ -1,6 +1,6 @@
-import {fetchGoods} from '../fetchGoods.js';
-import {goodItem} from './goodItem.js';
-import {layout} from './layout.js';
+import { fetchGoods } from '../fetchGoods.js';
+import { goodItem } from './goodItem.js';
+import { layout } from './layout.js';
 
 export const goods = async (favorite = false) => {
   try {

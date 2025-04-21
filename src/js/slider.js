@@ -1,4 +1,4 @@
-import {Navigation, Thumbs} from 'swiper/modules';
+import { Navigation, Thumbs } from 'swiper/modules';
 import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {

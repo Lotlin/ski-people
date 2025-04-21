@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import {layout} from './layout.js';
+import { layout } from './layout.js';
 
 export const footer = () => {
   const el = document.createElement('footer');

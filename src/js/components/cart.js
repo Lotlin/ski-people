@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
-import {fetchGoods} from '../fetchGoods.js';
-import {layout} from './layout.js';
+import { fetchGoods } from '../fetchGoods.js';
+import { layout } from './layout.js';
 
 export const cart = async () => {
   try {
@@ -121,6 +121,6 @@ export const cart = async () => {
 
     return el;
   } catch (error) {
-    console.error('Ошибка в получении товаров для корзины');
+    console.error('Ошибка в получении товаров для корзины:', error);
   }
 };
