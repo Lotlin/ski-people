@@ -1,4 +1,4 @@
-import { fetchGoods } from '../fetchGoods.js';
+import { fetchGoods } from '../api.js';
 import { goodItem } from './goodItem.js';
 import { layout } from './layout.js';
 

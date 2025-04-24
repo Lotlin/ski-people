@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
-
-import { fetchGoods } from '../fetchGoods.js';
+import { fetchGoods } from '../api.js';
 import { layout } from './layout.js';
 
 export const cart = async () => {
